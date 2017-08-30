@@ -1,7 +1,4 @@
 <h3>index.hbs</h3>
-<h6>{{model.length}} courses found</h6>
-<ul>
-  {{#each model as |course|}}
-    {{course-list-item model=course}}
-  {{/each}}
-</ul>
+<h6>{{model.list.length}} courses found</h6>
+{{course-list list=model.list}}
+<button {{action "loadMore"}}>Load More</button>
